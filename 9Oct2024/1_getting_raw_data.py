@@ -37,10 +37,10 @@ def download_and_save_stock_data():
             print(f"No data found for {ticker} in validation data period.")
             continue  # Skip this ticker if no data is found
 
-        # Keep only the 'Date', 'Close', and 'Volume' columns for validation data
-        validation_df = validation_df[['Close', 'Volume']]
+        # Keep only the 'Date' and 'Close' columns for validation data
+        validation_df = validation_df[['Close']]
         validation_df.reset_index(inplace=True)
-        validation_df.columns = ['Date', 'Closing', 'Volume']
+        validation_df.columns = ['Date', 'Closing']  # Rename 'Close' to 'Closing'
 
         # Save the validation DataFrame to a CSV file
         validation_csv_filename = f"2_validation_data/{ticker}_validation.csv"
