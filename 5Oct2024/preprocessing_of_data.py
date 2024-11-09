@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+#cleaning and checking for any outliers
 
 class PreprocessingOfData:
     def __init__(self, file_name):

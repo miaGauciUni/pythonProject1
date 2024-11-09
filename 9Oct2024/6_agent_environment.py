@@ -36,6 +36,7 @@ class AgentEnvironment:
         # List to store total portfolio values and actions taken each day
         self.portfolio_values = []
         self.daily_actions = []
+        self.monthly_returns = []
 
     def load_validation_data(self, stock_data_files):
         """
@@ -64,6 +65,15 @@ class AgentEnvironment:
                 models[stock] = pickle.load(f)
         return models
 
+    def get_prices_on_day(self, day_index):
+        """
+        Get the closing prices of all stocks on a specific day.
+        :param day_index: The day index (integer) in the validation data.
+        :return: Dictionary of stock prices for the given day.
+        """
+        prices = {stock: self.validation_data[stock].iloc[day_index].values[0] for stock in self.validation_data}
+        return prices
+
     def update_stock_prices(self, day):
         """
         Update stock prices for the given day.
@@ -72,6 +82,7 @@ class AgentEnvironment:
         for stock, data in self.validation_data.items():
             # Access the closing price directly (assuming the first column is the closing price)
             self.current_prices[stock] = data.iloc[day].values[0]  # Get the closing price
+
 
     def get_portfolio_value(self):
         """
@@ -134,9 +145,24 @@ class AgentEnvironment:
 
     def allocate_funds(self):
         """
-        Allocate funds to stocks based on predictions and ratios.
+        Allocate funds to stocks based on predictions and ratios. If all holdings are zero, the cash is split equally.
         """
-        # Calculate ratios for investment allocation
+        # Check if all holdings are zero
+        all_zero_holdings = all(shares == 0 for shares in self.portfolio.values())
+
+        if all_zero_holdings:
+            # Split cash equally among all stocks if all holdings are zero
+            equal_investment = self.cash / len(self.portfolio)
+            for stock in self.portfolio:
+                # Calculate the number of shares that can be bought with the equal investment
+                num_shares = equal_investment // self.current_prices[stock]
+                if num_shares > 0:
+                    self.portfolio[stock] += num_shares
+                    self.cash -= num_shares * self.current_prices[stock]
+                    self.log_action(stock, 'buy', num_shares, self.current_prices[stock])
+            return
+
+        # If not all holdings are zero, allocate based on predictions and ratios
         ratios = self.calculate_ratios()
 
         for stock, pred in self.predictions.items():
@@ -159,15 +185,20 @@ class AgentEnvironment:
     def run_simulation(self):
         """
         Run the simulation over the number of days in the validation data.
+        Calculate daily and monthly returns and track the portfolio performance.
         """
-        num_days = len(next(iter(self.validation_data.values())))
+        num_days = len(next(iter(self.validation_data.values())))  # Total number of days in validation data
+        days_per_month = 21  # Assuming 21 trading days per month for simplicity
+
+        start_value = self.total_value  # Initial portfolio value
+        current_month = 1  # Track the current month
 
         for day in range(num_days):
-            self.update_stock_prices(day)
-            self.make_decision(day)
-            self.allocate_funds()
+            self.update_stock_prices(day)  # Update prices for the day
+            self.make_decision(day)  # Make trading decisions
+            self.allocate_funds()  # Allocate funds based on decisions
 
-            # Calculate and record the total portfolio value
+            # Calculate and record the total portfolio value for the day
             total_value = self.get_portfolio_value()
             self.portfolio_values.append(total_value)
 
@@ -186,22 +217,89 @@ class AgentEnvironment:
 
             print("-" * 50)
 
+            # Check if it's the end of the month (every 21 days) or the last day of the data
+            if (day + 1) % days_per_month == 0 or day == num_days - 1:
+                # Calculate the monthly return
+                monthly_return = (total_value - start_value) / start_value * 100
+                self.monthly_returns.append(monthly_return)
+
+                # Print monthly summary
+                print(f"\nEnd of Month {current_month}:")
+                print(f"Monthly Return = {monthly_return:.2f}%")
+                print(f"Total Portfolio Value = ${total_value:.2f}")
+                print("=" * 50)
+
+                # Update the start value for the next month and increment the month counter
+                start_value = total_value
+                current_month += 1
+
             # Clear actions for the next day
             self.daily_actions.clear()
 
-        # Call the plot function at the end of the simulation
-        self.plot_portfolio_value()
+        # Calculate and print the average monthly return
+        if self.monthly_returns:
+            average_monthly_return = np.mean(self.monthly_returns)
+            print(f"\nAverage Monthly Return: {average_monthly_return:.2f}%")
 
-    def plot_portfolio_value(self):
+        # Call the plot function at the end of the simulation
+        self.plot_portfolio_comparison()
+
+    def buy_and_hold(self):
         """
-        Plot the portfolio value over time with months on the x-axis.
+        Simulate a buy-and-hold strategy by dividing the initial cash equally among the five stocks and holding them.
+        Calculate the portfolio value for each day to be able to plot it dynamically.
+        :return: A list of daily portfolio values using a buy-and-hold strategy.
         """
-        # Create a new figure
+        # Calculate the amount to invest in each stock
+        equal_investment = 20000
+        buy_and_hold_portfolio = {}
+
+        # Buy stocks on the first day using equal investment
+        initial_prices = self.get_prices_on_day(0)
+        for stock, price in initial_prices.items():
+            # Calculate the number of shares bought using floating-point division
+            buy_and_hold_portfolio[stock] = equal_investment / price
+
+        # Track the portfolio value for each day
+        buy_and_hold_values = []
+        num_days = len(next(iter(self.validation_data.values())))
+        days_per_month = 21  # Assuming 21 trading days per month for simplicity
+
+        for day in range(num_days):
+            # Get the prices for the current day
+            current_prices = self.get_prices_on_day(day)
+            # Calculate the total portfolio value for the day
+            total_value = sum(buy_and_hold_portfolio[stock] * current_prices[stock] for stock in buy_and_hold_portfolio)
+            buy_and_hold_values.append(total_value)
+
+        # Calculate monthly returns
+        buy_and_hold_monthly_returns = []
+        for i in range(0, len(buy_and_hold_values), days_per_month):
+            start_value = buy_and_hold_values[i]
+            end_value = buy_and_hold_values[min(i + days_per_month - 1, len(buy_and_hold_values) - 1)]
+            monthly_return = (end_value - start_value) / start_value * 100
+            buy_and_hold_monthly_returns.append(monthly_return)
+
+        average_monthly_return = np.mean(buy_and_hold_monthly_returns) if buy_and_hold_monthly_returns else 0
+        print(f"\nBuy and Hold Strategy Final Value: ${buy_and_hold_values[-1]:.2f}")
+        print(f"Buy and Hold Strategy Average Monthly Return: {average_monthly_return:.2f}%")
+
+        return buy_and_hold_values
+
+    def plot_portfolio_comparison(self):
+        """
+        Plot the portfolio value over time with days on the x-axis, along with the buy-and-hold strategy.
+        """
+        # Get the daily values of the buy-and-hold strategy
+        buy_and_hold_values = self.buy_and_hold()
+
+        # Create a new figure for portfolio comparison
         plt.figure(figsize=(12, 6))
-        plt.plot(self.portfolio_values, label='Portfolio Value', marker='o')
+        plt.plot(self.portfolio_values, label='Predicted Portfolio Value', linestyle='-', linewidth=2, color='blue')
+        plt.plot(buy_and_hold_values, label='Buy and Hold Strategy', color='red', linestyle='--')
 
         # Title and labels
-        plt.title('Portfolio Value from 01-01-24 till 31-08-24')
+        plt.title('Portfolio Value Comparison: Predicted vs Buy and Hold')
         plt.xlabel('Days')
         plt.ylabel('Value ($)')
         plt.legend()
@@ -211,6 +309,65 @@ class AgentEnvironment:
         # Show the plot
         plt.show()
 
+    def buy_single_stocks(self):
+        """
+        Buy £100,000 worth of each individual stock on the first day and track its value throughout the trading period.
+        :return: A dictionary containing lists of daily values for each single-stock portfolio.
+        """
+        single_stock_values = {}
+
+        # Calculate the number of shares bought for each stock on the first day
+        initial_prices = self.get_prices_on_day(0)
+        for stock, price in initial_prices.items():
+            # Check if the initial price is valid (non-zero and positive)
+            if price <= 0:
+                print(f"Warning: Initial price for {stock} is not valid. Skipping.")
+                continue
+
+            # Calculate the number of shares bought for £100,000 investment
+            num_shares = 100000 / price
+            single_stock_values[stock] = []
+
+            # Track the value of this single-stock portfolio over the trading period
+            num_days = len(next(iter(self.validation_data.values())))
+            for day in range(num_days):
+                current_price = self.get_prices_on_day(day)[stock]
+                total_value = num_shares * current_price
+                single_stock_values[stock].append(total_value)
+
+        return single_stock_values
+
+
+    def plot_individual_stock_movements(self):
+        """
+        Plot the individual stock values over time on a separate plot.
+        """
+        # Get the individual stock values
+        single_stock_values = self.buy_single_stocks()
+
+        # Create a new figure for individual stock movements
+        plt.figure(figsize=(12, 6))
+
+        # Plot individual stock lines with different colors and thin lines
+        colors = ['blue', 'green', 'purple', 'orange', 'brown']
+        for idx, (stock, values) in enumerate(single_stock_values.items()):
+            # Ensure that values are correctly populated and have no issues
+            if not values or len(values) == 0:
+                print(f"Warning: No values found for stock {stock}.")
+                continue
+
+            plt.plot(values, label=f'{stock} Single Stock', color=colors[idx % len(colors)], linestyle='-', linewidth=1)
+
+        # Title and labels
+        plt.title('Individual Stock Movements')
+        plt.xlabel('Days')
+        plt.ylabel('Value ($)')
+        plt.legend()
+        plt.grid()
+        plt.tight_layout()
+
+        # Show the plot
+        plt.show()
 
 if __name__ == '__main__':
     initial_cash = 100000
@@ -233,3 +390,4 @@ if __name__ == '__main__':
 
     agent_env = AgentEnvironment(initial_cash, stock_data_files, model_files)
     agent_env.run_simulation()
+    agent_env.plot_individual_stock_movements()

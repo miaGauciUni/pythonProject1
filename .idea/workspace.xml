@@ -4,34 +4,109 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b462cc-1950-4e3e-9ea4-56a05187a537" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5Oct2024/getting_raw_stock_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5Oct2024/preprocessing_of_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5Oct2024/processing_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5Oct2024/processing_data_equal_quantile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5Oct2024/processing_getting_actions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5Oct2024/training_using_MLP.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MLP/MLPAgent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MLP/MLP_Training.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MLP/MLP_Training_01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MLP/MLP_Training_02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MLP/MLP_Training_03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StockDataProcessor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StockDataProcessor_Calculations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StockDataProcessor_NormalHistogram.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environmentClass01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environmentClass02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment_1_Stock.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gettingStockData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main02.py" afterDir="false" />
+    <list default="true" id="f1b462cc-1950-4e3e-9ea4-56a05187a537" name="Changes" comment="5 oct">
+      <change afterPath="$PROJECT_DIR$/21Oct2024/1_getting_raw_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/1_raw_data/AAPL_raw.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/1_raw_data/AMZN_raw.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/1_raw_data/GOOG_raw.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/1_raw_data/MSFT_raw.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/1_raw_data/NVDA_raw.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_preprocessing_of_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/AAPL_processed_validation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/AAPL_processed_validation.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/AAPL_validation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/AMZN_processed_validation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/AMZN_processed_validation.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/AMZN_validation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/GOOG_processed_validation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/GOOG_processed_validation.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/GOOG_validation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/MSFT_processed_validation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/MSFT_processed_validation.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/MSFT_validation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/NVDA_processed_validation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/NVDA_processed_validation.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/2_validation_data/NVDA_validation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/3_1_processing_indicators_validation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/3_clean_raw_data/AAPL_clean.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/3_clean_raw_data/AMZN_clean.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/3_clean_raw_data/GOOG_clean.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/3_clean_raw_data/MSFT_clean.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/3_clean_raw_data/NVDA_clean.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/3_technical_indicators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/4_0_3day_window_action.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/4_0_5day_window_actions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/4_data_w_indicators/AAPL_tech_ind.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/4_data_w_indicators/AMZN_tech_ind.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/4_data_w_indicators/GOOG_tech_ind.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/4_data_w_indicators/MSFT_tech_ind.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/4_data_w_indicators/NVDA_tech_ind.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_predictor_MLP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/AAPL_10day_tech_action.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/AAPL_10day_tech_action.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/AAPL_5day_tech_action.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/AAPL_5day_tech_action.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/AMZN_10day_tech_action.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/AMZN_10day_tech_action.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/AMZN_5day_tech_action.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/AMZN_5day_tech_action.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/GOOG_10day_tech_action.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/GOOG_10day_tech_action.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/GOOG_5day_tech_action.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/GOOG_5day_tech_action.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/MSFT_10day_tech_action.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/MSFT_10day_tech_action.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/MSFT_5day_tech_action.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/MSFT_5day_tech_action.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/NVDA_10day_tech_action.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/NVDA_10day_tech_action.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/NVDA_5day_tech_action.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/5_processed_with_actions/NVDA_5day_tech_action.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/6_1_agent_environment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/6_agent_environment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/6_stock_models/AAPL_MLP_model.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/6_stock_models/AMZN_MLP_model.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/6_stock_models/GOOG_MLP_model.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/6_stock_models/MSFT_MLP_model.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21Oct2024/6_stock_models/NVDA_MLP_model.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9Nov2024/Critic_CNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9Oct2024/4_0_3day_window_action.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9Oct2024/5_1_model_predictor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/9Oct2024/6_1_agent_environment_equal_split.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/try.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pythonProject1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5Oct2024/preprocessing_of_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/5Oct2024/preprocessing_of_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5Oct2024/processing_getting_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/5Oct2024/processing_getting_actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5Oct2024/processing_getting_actions_w5Indicators.py" beforeDir="false" afterPath="$PROJECT_DIR$/5Oct2024/processing_getting_actions_w5Indicators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5Oct2024/processing_getting_actions_wIndicators.py" beforeDir="false" afterPath="$PROJECT_DIR$/5Oct2024/processing_getting_actions_wIndicators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5Oct2024/technical_indicators.py" beforeDir="false" afterPath="$PROJECT_DIR$/5Oct2024/technical_indicators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5Oct2024/training_using_MLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/5Oct2024/training_using_MLP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5Oct2024/training_using_MLP_tech.py" beforeDir="false" afterPath="$PROJECT_DIR$/5Oct2024/training_using_MLP_tech.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/4_0_5day_window_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/4_0_5day_window_actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/4_1_10day_window_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/4_1_10day_window_actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/4_data_w_indicators/AAPL_tech_ind.csv" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/4_data_w_indicators/AAPL_tech_ind.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/4_data_w_indicators/AMZN_tech_ind.csv" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/4_data_w_indicators/AMZN_tech_ind.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/4_data_w_indicators/GOOG_tech_ind.csv" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/4_data_w_indicators/GOOG_tech_ind.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/5_predictor_MLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/5_predictor_MLP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/AAPL_5day_tech_action.csv" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/AAPL_5day_tech_action.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/AAPL_5day_tech_action.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/AAPL_5day_tech_action.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/AMZN_5day_tech_action.csv" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/AMZN_5day_tech_action.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/AMZN_5day_tech_action.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/AMZN_5day_tech_action.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/GOOG_5day_tech_action.csv" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/GOOG_5day_tech_action.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/GOOG_5day_tech_action.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/GOOG_5day_tech_action.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/MSFT_5day_tech_action.csv" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/MSFT_5day_tech_action.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/MSFT_5day_tech_action.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/MSFT_5day_tech_action.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/NVDA_5day_tech_action.csv" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/NVDA_5day_tech_action.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/NVDA_5day_tech_action.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/5_processed_with_actions/NVDA_5day_tech_action.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/6_agent_environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/6_agent_environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/6_stock_models/AAPL_MLP_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/6_stock_models/AAPL_MLP_model.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/6_stock_models/AMZN_MLP_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/6_stock_models/AMZN_MLP_model.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/6_stock_models/GOOG_MLP_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/6_stock_models/GOOG_MLP_model.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/6_stock_models/MSFT_MLP_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/6_stock_models/MSFT_MLP_model.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/9Oct2024/6_stock_models/NVDA_MLP_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/9Oct2024/6_stock_models/NVDA_MLP_model.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initialFiles /StockDataProcessor_NormalHistogram.py" beforeDir="false" afterPath="$PROJECT_DIR$/initialFiles /StockDataProcessor_NormalHistogram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initialFiles /main.py" beforeDir="false" afterPath="$PROJECT_DIR$/initialFiles /main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +123,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;miaGauciUni&quot;
+  }
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="8683db05-19e0-4f66-9603-f2e91b313293" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:miaGauciUni/pythonProject1.git&quot;,
+    &quot;accountId&quot;: &quot;8683db05-19e0-4f66-9603-f2e91b313293&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -59,6 +149,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.1_getting_raw_data.executor": "Run",
+    "Python.2_preprocessing_of_data.executor": "Run",
+    "Python.3_1_processing_indicators_validation.executor": "Run",
+    "Python.3_technical_indicators.executor": "Run",
+    "Python.4_0_3day_window_action.executor": "Run",
+    "Python.4_0_5day_window_actions.executor": "Run",
+    "Python.4_1_10day_window_actions.executor": "Run",
+    "Python.5_1_model_predictor.executor": "Run",
+    "Python.5_predictor_MLP (1).executor": "Run",
+    "Python.5_predictor_MLP.executor": "Run",
+    "Python.6_1_agent_environment.executor": "Run",
+    "Python.6_1_agent_environment_equal_split.executor": "Run",
+    "Python.6_agent_environment.executor": "Run",
+    "Python.Critic_CNN.executor": "Run",
     "Python.MLP_Training.executor": "Run",
     "Python.MLP_Training_01.executor": "Run",
     "Python.MLP_Training_02.executor": "Run",
@@ -72,28 +176,41 @@
     "Python.preprocessing_of_data.executor": "Run",
     "Python.processing_data.executor": "Run",
     "Python.processing_getting_actions.executor": "Run",
+    "Python.processing_getting_actions_w10Indicators.executor": "Run",
+    "Python.processing_getting_actions_w5Indicators.executor": "Run",
+    "Python.processing_getting_actions_wIndicators.executor": "Run",
+    "Python.technical_indicators.executor": "Run",
     "Python.training_using_MLP.executor": "Run",
+    "Python.training_using_MLP_tech.executor": "Run",
+    "Python.try.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "database.data.extractors.current.export.id": "CSV-Groovy.csv.groovy",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/miagauci/PycharmProjects/Tensorflow/pythonProject1/9Nov2024/3-Day_Window",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/9Nov2024/3-Day_Window" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/9Nov2024/3-Day_Window" />
+      <recent name="$PROJECT_DIR$/initialFiles " />
       <recent name="$PROJECT_DIR$/5Oct2024/processedWithActions" />
       <recent name="$PROJECT_DIR$/5Oct2024/rawData" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/MLP" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.training_using_MLP">
-    <configuration name="getting_raw_stock_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Critic_CNN">
+    <configuration name="5_predictor_MLP (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,12 +219,81 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5Oct2024" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/21Oct2024" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5Oct2024/getting_raw_stock_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/21Oct2024/5_predictor_MLP.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="6_1_agent_environment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/21Oct2024" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/21Oct2024/6_1_agent_environment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="6_agent_environment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/21Oct2024" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/21Oct2024/6_agent_environment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Critic_CNN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/9Nov2024" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/9Nov2024/Critic_CNN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -130,7 +316,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/initialFiles /main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,7 +325,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="preprocessing_of_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="try" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,81 +334,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5Oct2024" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5Oct2024/preprocessing_of_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="processing_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pythonProject1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5Oct2024" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5Oct2024/processing_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="processing_getting_actions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pythonProject1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5Oct2024" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5Oct2024/processing_getting_actions.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="training_using_MLP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pythonProject1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5Oct2024" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5Oct2024/training_using_MLP.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/try.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -233,11 +350,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.training_using_MLP" />
-        <item itemvalue="Python.processing_getting_actions" />
-        <item itemvalue="Python.processing_data" />
-        <item itemvalue="Python.preprocessing_of_data" />
-        <item itemvalue="Python.getting_raw_stock_data" />
+        <item itemvalue="Python.Critic_CNN" />
+        <item itemvalue="Python.try" />
+        <item itemvalue="Python.5_predictor_MLP (1)" />
+        <item itemvalue="Python.6_agent_environment" />
+        <item itemvalue="Python.6_1_agent_environment" />
       </list>
     </recent_temporary>
   </component>
@@ -264,18 +381,71 @@
       <workItem from="1727719082410" duration="4410000" />
       <workItem from="1727770486948" duration="27558000" />
       <workItem from="1728115946643" duration="8507000" />
-      <workItem from="1728223271094" duration="6345000" />
+      <workItem from="1728223271094" duration="7184000" />
+      <workItem from="1728282053626" duration="525000" />
+      <workItem from="1728302279644" duration="8520000" />
+      <workItem from="1728375653698" duration="2684000" />
+      <workItem from="1728392730499" duration="6360000" />
+      <workItem from="1728461356734" duration="9350000" />
+      <workItem from="1728545694854" duration="14259000" />
+      <workItem from="1728633327715" duration="3134000" />
+      <workItem from="1728980239108" duration="3269000" />
+      <workItem from="1728987078933" duration="350000" />
+      <workItem from="1728993338308" duration="206000" />
+      <workItem from="1728996627862" duration="405000" />
+      <workItem from="1729151692421" duration="7372000" />
+      <workItem from="1729447573715" duration="4088000" />
+      <workItem from="1729506677586" duration="4820000" />
+      <workItem from="1730276936387" duration="2564000" />
+      <workItem from="1731143925532" duration="2037000" />
+      <workItem from="1731153138227" duration="1190000" />
+      <workItem from="1731154731710" duration="352000" />
+      <workItem from="1731155167821" duration="1586000" />
     </task>
+    <task id="LOCAL-00001" summary="5 oct">
+      <option name="closed" value="true" />
+      <created>1728232441623</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728232441623</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="23b66df9-7465-4d80-8350-d500782c6de2" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="23b66df9-7465-4d80-8350-d500782c6de2">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="5 oct" />
+    <option name="LAST_COMMIT_MESSAGE" value="5 oct" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gettingStockData.py</url>
+          <url>file://$PROJECT_DIR$/initialFiles /gettingStockData.py</url>
           <line>56</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -289,18 +459,38 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonProject1$StockDataProcessor_NormalHistogram.coverage" NAME="StockDataProcessor_NormalHistogram Coverage Results" MODIFIED="1727955407273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProject1$3_1_processing_indicators_validation.coverage" NAME="3_1_processing_indicators_validation Coverage Results" MODIFIED="1729538826979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/21Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$1_getting_raw_data.coverage" NAME="1_getting_raw_data Coverage Results" MODIFIED="1728548644976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/9Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$training_using_MLP_tech.coverage" NAME="training_using_MLP_tech Coverage Results" MODIFIED="1728566451785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$6_agent_environment.coverage" NAME="6_agent_environment Coverage Results" MODIFIED="1730279643630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/21Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$processing_getting_actions_wIndicators.coverage" NAME="processing_getting_actions_wIndicators Coverage Results" MODIFIED="1728310554731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$4_0_3day_window_action.coverage" NAME="4_0_3day_window_action Coverage Results" MODIFIED="1729539073868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/21Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$MLP_Training_02.coverage" NAME="MLP_Training_02 Coverage Results" MODIFIED="1727903611338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLP" />
+    <SUITE FILE_PATH="coverage/pythonProject1$try.coverage" NAME="try Coverage Results" MODIFIED="1731152147580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProject1$processing_getting_actions_w5Indicators.coverage" NAME="processing_getting_actions_w5Indicators Coverage Results" MODIFIED="1728471414397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$MLP_Training_01.coverage" NAME="MLP_Training_01 Coverage Results" MODIFIED="1727896771375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProject1$Critic_CNN.coverage" NAME="Critic_CNN Coverage Results" MODIFIED="1731160754645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/9Nov2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$processing_getting_actions.coverage" NAME="processing_getting_actions Coverage Results" MODIFIED="1728304115873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$getting_raw_stock_data.coverage" NAME="getting_raw_stock_data Coverage Results" MODIFIED="1728120156174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$3_technical_indicators.coverage" NAME="3_technical_indicators Coverage Results" MODIFIED="1729537393341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/21Oct2024" />
     <SUITE FILE_PATH="coverage/pythonProject1$gettingStockData.coverage" NAME="gettingStockData Coverage Results" MODIFIED="1727643449007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject1$MLP_Training.coverage" NAME="MLP_Training Coverage Results" MODIFIED="1727891079481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProject1$4_0_5day_window_actions.coverage" NAME="4_0_5day_window_actions Coverage Results" MODIFIED="1729156582991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/9Oct2024" />
     <SUITE FILE_PATH="coverage/pythonProject1$MLP_Training_03.coverage" NAME="MLP_Training_03 Coverage Results" MODIFIED="1728117664864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLP" />
     <SUITE FILE_PATH="coverage/pythonProject1$StockDataProcessor_Calculations.coverage" NAME="StockDataProcessor_Calculations Coverage Results" MODIFIED="1727955398211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject1$main.coverage" NAME="main Coverage Results" MODIFIED="1727874596536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonProject1$MLP_Training_02.coverage" NAME="MLP_Training_02 Coverage Results" MODIFIED="1727903611338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLP" />
-    <SUITE FILE_PATH="coverage/pythonProject1$MLP_Training_01.coverage" NAME="MLP_Training_01 Coverage Results" MODIFIED="1727896771375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonProject1$processing_getting_actions.coverage" NAME="processing_getting_actions Coverage Results" MODIFIED="1728231791801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$5_predictor_MLP__1_.coverage" NAME="5_predictor_MLP (1) Coverage Results" MODIFIED="1730279898739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/21Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$6_1_agent_environment_equal_split.coverage" NAME="6_1_agent_environment_equal_split Coverage Results" MODIFIED="1728636138830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/9Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$6_1_agent_environment.coverage" NAME="6_1_agent_environment Coverage Results" MODIFIED="1730279586811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/21Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$technical_indicators.coverage" NAME="technical_indicators Coverage Results" MODIFIED="1728311289032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$5_predictor_MLP.coverage" NAME="5_predictor_MLP Coverage Results" MODIFIED="1729507050305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/9Oct2024" />
     <SUITE FILE_PATH="coverage/pythonProject1$StockDataProcessor.coverage" NAME="StockDataProcessor Coverage Results" MODIFIED="1727770517233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonProject1$getting_raw_stock_data.coverage" NAME="getting_raw_stock_data Coverage Results" MODIFIED="1728120156174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$processing_getting_actions_w10Indicators.coverage" NAME="processing_getting_actions_w10Indicators Coverage Results" MODIFIED="1728398992915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
     <SUITE FILE_PATH="coverage/pythonProject1$preprocessing_of_data.coverage" NAME="preprocessing_of_data Coverage Results" MODIFIED="1728123422018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
-    <SUITE FILE_PATH="coverage/pythonProject1$training_using_MLP.coverage" NAME="training_using_MLP Coverage Results" MODIFIED="1728231859648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$training_using_MLP.coverage" NAME="training_using_MLP Coverage Results" MODIFIED="1728305430170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$4_1_10day_window_actions.coverage" NAME="4_1_10day_window_actions Coverage Results" MODIFIED="1728636326821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/9Oct2024" />
     <SUITE FILE_PATH="coverage/pythonProject1$processing_data.coverage" NAME="processing_data Coverage Results" MODIFIED="1728124953822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$2_preprocessing_of_data.coverage" NAME="2_preprocessing_of_data Coverage Results" MODIFIED="1728466006866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/9Oct2024" />
+    <SUITE FILE_PATH="coverage/pythonProject1$5_1_model_predictor.coverage" NAME="5_1_model_predictor Coverage Results" MODIFIED="1729159901932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/9Oct2024" />
   </component>
 </project>

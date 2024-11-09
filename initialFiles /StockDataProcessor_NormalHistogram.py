@@ -111,7 +111,7 @@ class DataProcessor:
 # Example usage
 if __name__ == "__main__":
     # Load the CSV file
-    df = pd.read_csv("MLP/GOOG_2019_to_2023.csv")
+    df = pd.read_csv("../MLP/GOOG_2019_to_2023.csv")
 
     # Create a DataProcessor instance
     processor = DataProcessor(df)

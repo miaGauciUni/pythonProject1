@@ -76,18 +76,13 @@ class ProcessingData:
         plt.ylabel('Frequency')
         plt.grid(axis='y', alpha=0.75)
 
-        # Add legend
+
         plt.legend()
-
-        # Show the plot
         plt.show()
-
+    """
     def evaluate_last_5_days(self):
-        """
-        Evaluate the past 5 days of closing prices and volumes,
-        determining the action based on the differences.
-        """
-        # Create new DataFrame to hold the last 5 days of data
+
+        # Creating a new DataFrame to hold the last 5 days of data
         actions = []
 
         for i in range(4, len(self.df)):
@@ -109,6 +104,33 @@ class ProcessingData:
         # Save the actions DataFrame to a CSV file
         actions_df.to_csv("AAPL_5day_action.csv", index=False)
         print("Actions saved to AAPL_5day_action.csv.")
+        
+    """
+
+    def evaluate_last_5_days(self):
+
+        # Creating a new DataFrame to hold the last 3 days of data
+        actions = []
+
+        for i in range(2, len(self.df)):
+            # Extract closing prices and volumes for the last 3 days
+            closes = self.df['Closing'].iloc[i - 2:i + 1].values
+            volumes = self.df['Volume'].iloc[i - 2:i + 1].values
+
+            # Calculate action based on the current closing price difference
+            action = self.determine_action(closes[-1], closes[:-1], volumes)
+            actions.append([*closes, *volumes, action])
+
+        # Create a new DataFrame to save the actions
+        actions_df = pd.DataFrame(actions, columns=[
+             'Close_3', 'Close_2', 'Close_1',
+             'Volume_3', 'Volume_2', 'Volume_1',
+            'Action'
+        ])
+
+        # Save the actions DataFrame to a CSV file
+        actions_df.to_csv("AAPL_3day_action.csv", index=False)
+        print("Actions saved to AAPL_3day_action.csv.")
 
     def determine_action(self, current_close, previous_closes, volumes):
         """

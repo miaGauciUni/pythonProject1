@@ -7,7 +7,7 @@ import numpy as np
 
 def main():
     # Load the CSV file
-    df = pd.read_csv("MLP/GOOG_2019_to_2023.csv")
+    df = pd.read_csv("../MLP/GOOG_2019_to_2023.csv")
 
     # Create the data processor and preprocess the data
     processor = DataProcessor(df)
